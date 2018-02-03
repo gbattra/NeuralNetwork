@@ -1,3 +1,5 @@
+# scale features for better nn training
+
 import numpy as np
 
 

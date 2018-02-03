@@ -6,6 +6,7 @@ import scipy
 import matplotlib as plt
 import datacleaner
 from feature_scale import feature_scale
+import random_initialize as ri
 
 # load and clean data
 data = pd.read_csv('dataset.csv')
@@ -16,3 +17,11 @@ y = clean_data[:, 279:280]
 # perform feature scaling
 X = feature_scale(X)
 
+# initialize neural network features
+input_layer_size = X.shape[1]  # number of initial attributes
+hidden_layer_size = 50  # size of hidden layer of nn
+num_labels = 16  # number of classes to predict
+
+# randomly initialize Thetas
+Theta_1 = ri.initialize_weights(input_layer_size, hidden_layer_size)
+Theta_2 = ri.initialize_weights(hidden_layer_size, num_labels)
