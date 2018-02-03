@@ -2,11 +2,12 @@
 
 import numpy as np
 import pandas as pd
-import scipy
 import matplotlib as plt
-import datacleaner
-from feature_scale import feature_scale
 import random_initialize as ri
+import datacleaner
+import scipy
+from feature_scale import feature_scale
+from compute_cost import compute_cost
 
 # load and clean data
 data = pd.read_csv('dataset.csv')
@@ -18,10 +19,17 @@ y = clean_data[:, 279:280]
 X = feature_scale(X)
 
 # initialize neural network features
-input_layer_size = X.shape[1]  # number of initial attributes
-hidden_layer_size = 50  # size of hidden layer of nn
+input_layer = X.shape[1]  # number of initial attributes
+hidden_layer = 50  # size of hidden layer of nn
 num_labels = 16  # number of classes to predict
+L = 1 # initialize Lambda
 
 # randomly initialize Thetas
-Theta_1 = ri.initialize_weights(input_layer_size, hidden_layer_size)
-Theta_2 = ri.initialize_weights(hidden_layer_size, num_labels)
+Theta_1 = ri.initialize_weights(input_layer, hidden_layer)
+Theta_2 = ri.initialize_weights(hidden_layer, num_labels)
+
+# roll up these Thetas so that they be used in the optimization function
+W = np.matrix(np.append(Theta_1.flatten(), Theta_2.flatten()))
+
+# test cost function for passing to optimization function
+J, grad = compute_cost(W, input_layer, hidden_layer, num_labels, X, y, L)
