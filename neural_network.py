@@ -31,5 +31,9 @@ Theta_2 = ri.initialize_weights(hidden_layer, num_labels)
 # roll up these Thetas so that they be used in the optimization function
 W = np.matrix(np.append(Theta_1.flatten(), Theta_2.flatten()))
 
+# reshape y into m x num_labels matrix (i.e. 0 0 1 0 ... 0)
+# where the column index for the value 1 indicates the corresponding class
+y_reshape = vector_to_class_matrix(y, num_labels)
+
 # test cost function for passing to optimization function
 J, grad = compute_cost(W, input_layer, hidden_layer, num_labels, X, y, L)
