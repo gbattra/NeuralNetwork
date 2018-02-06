@@ -2,7 +2,7 @@
 import numpy as np
 
 
-def vector_to_class_matrix(y, num_labels):
+def encode_y(y, num_labels):
 
     # get training size
     m = y.shape[0]
