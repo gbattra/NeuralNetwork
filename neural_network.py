@@ -8,6 +8,7 @@ import datacleaner
 import scipy
 from feature_scale import feature_scale
 from compute_cost import compute_cost
+from vector_to_class_matrix import vector_to_class_matrix
 
 # load and clean data
 data = pd.read_csv('dataset.csv')
@@ -29,7 +30,7 @@ Theta_1 = ri.initialize_weights(input_layer, hidden_layer)
 Theta_2 = ri.initialize_weights(hidden_layer, num_labels)
 
 # roll up these Thetas so that they be used in the optimization function
-W = np.matrix(np.append(Theta_1.flatten(), Theta_2.flatten()))
+W = np.matrix(np.hstack((Theta_1.flatten(), Theta_2.flatten())))
 
 # reshape y into m x num_labels matrix (i.e. 0 0 1 0 ... 0)
 # where the column index for the value 1 indicates the corresponding class
