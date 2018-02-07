@@ -9,9 +9,8 @@ def compute_cost(W, L_in, hidden_layer, L_out, X, y, L):
 
     # unwrap W into initial thetas
     Theta_1_size = hidden_layer * (L_in + 1)
-    Theta_2_size = L_out * (hidden_layer + 1)
-    Theta_1_flat = W[0, 0:Theta_1_size]
-    Theta_2_flat = W[0, Theta_1_size:(Theta_1_size + Theta_2_size)]
+    Theta_1_flat = W[0:Theta_1_size]
+    Theta_2_flat = W[Theta_1_size:]
 
     # reshape W into Thetas
     Theta_1 = Theta_1_flat.reshape(hidden_layer, L_in + 1)
@@ -23,12 +22,12 @@ def compute_cost(W, L_in, hidden_layer, L_out, X, y, L):
     # add 1s to input layer and make predictions for input layer
     a1_0 = np.ones((X.shape[0], 1))
     a1 = np.hstack((a1_0, X))
-    z2 = a1 * Theta_1.T
+    z2 = a1.dot(Theta_1.T)
 
     # get second layer inputs, add 1s and make final layer predictions
     a2_0 = np.ones((z2.shape[0], 1))
     a2 = np.hstack((a2_0, sigmoid(z2)))
-    z3 = a2 * Theta_2.T
+    z3 = a2.dot(Theta_2.T)
     h = sigmoid(z3)
 
     # compute the cost
@@ -48,4 +47,18 @@ def compute_cost(W, L_in, hidden_layer, L_out, X, y, L):
     # add reg term to J
     J += reg_term
 
-    return J
+    # perform backpropagation to compute gradients
+    d3 = h - y
+    d2 = np.multiply(d3.dot(Theta_2), np.multiply(a2, 1 - a2))
+    d2 = d2[:, 1:]  # remove 1s column from delta
+    Theta_2_grad = (d3.T.dot(a2)) / m
+    Theta_1_grad = (d2.T.dot(a1)) / m
+
+    # add regularization term
+    Theta_1_grad += (L / m) * temp_Theta_1
+    Theta_2_grad += (L / m) * temp_Theta_2
+
+    # unroll gradients
+    grad = np.hstack((Theta_1_grad.flatten(), Theta_2_grad.flatten()))
+
+    return J, grad, h
