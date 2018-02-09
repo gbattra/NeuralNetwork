@@ -17,7 +17,7 @@ def compute_cost(W, L_in, hidden_layer, L_out, X, y, L):
     Theta_2 = Theta_2_flat.reshape(L_out, hidden_layer + 1)
 
     # store training size
-    m = X.shape[0]
+    m = float(X.shape[0])
 
     # add 1s to input layer and make predictions for input layer
     a1_0 = np.ones((X.shape[0], 1))
@@ -49,7 +49,7 @@ def compute_cost(W, L_in, hidden_layer, L_out, X, y, L):
 
     # perform backpropagation to compute gradients
     d3 = h - y
-    d2 = np.multiply(d3.dot(Theta_2), np.multiply(a2, 1 - a2))
+    d2 = d3.dot(Theta_2) * (a2 * (1 - a2))
     d2 = d2[:, 1:]  # remove 1s column from delta
     Theta_2_grad = (d3.T.dot(a2)) / m
     Theta_1_grad = (d2.T.dot(a1)) / m
@@ -61,4 +61,4 @@ def compute_cost(W, L_in, hidden_layer, L_out, X, y, L):
     # unroll gradients
     grad = np.hstack((Theta_1_grad.flatten(), Theta_2_grad.flatten()))
 
-    return J, grad, h
+    return J, grad
