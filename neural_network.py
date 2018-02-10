@@ -5,12 +5,13 @@ import matplotlib.pyplot as plt
 import random_initialize as ri
 from sklearn import preprocessing
 from sklearn import datasets
-from compute_cost import compute_cost
+from compute_cost import compute_cost, get_cost, get_grad
 from gradient_descent import gradient_descent
 from predict import predict
 from theta_transform import unwrap_theta
+from scipy import optimize
 
-
+# load example dataset from sklearn
 data = datasets.load_breast_cancer()
 X = data.data
 y = data.target
@@ -45,7 +46,7 @@ W = np.hstack((Theta_1.flatten(), Theta_2.flatten()))
 J, grad = compute_cost(W, input_layer, hidden_layer, num_labels, X, y_encoded, L)
 
 # initialize training params
-alpha = 1.1
+alpha = 1.0
 num_iters = 1500
 
 # train Thetas using gradient descent
@@ -61,7 +62,22 @@ Theta_1, Theta_2 = unwrap_theta(W, input_layer, hidden_layer, num_labels)
 h = predict(X, [Theta_1, Theta_2])
 predicted_classes = h.argmax(axis=1)
 err = np.count_nonzero(predicted_classes - y)
-acc = (m - err) / float(m)
+gd_acc = (m - err) / float(m)
+gd_cost, gd_grad = compute_cost(W, input_layer, hidden_layer, num_labels, X, y_encoded, L)
 
-# print accuracy (~ 98%)
-print('Accuracy: ' + str(acc))
+# now with scipy's fmin_cg function to see how gradient descent compared
+W = optimize.fmin_cg(get_cost, W, args=(input_layer, hidden_layer, num_labels, X, y_encoded, L))
+Theta_1, Theta_2 = unwrap_theta(W, input_layer, hidden_layer, num_labels)
+h = predict(X, [Theta_1, Theta_2])
+predicted_classes = h.argmax(axis=1)
+err = np.count_nonzero(predicted_classes - y)
+fmincg_acc = (m - err) / float(m)
+
+# print gradient descent accuracy (~ 98%)
+print('GD Cost: ' + str(gd_cost) + '\n')
+print('GD Accuracy: ' + str(gd_acc) + '\n')
+
+# print fmin_cg accuracy (~ 98%)
+fmincg_cost, fmincg_grad = compute_cost(W, input_layer, hidden_layer, num_labels, X, y_encoded, L)
+print('fmin_cg Cost: ' + str(fmincg_cost) + '\n')
+print('fmin_cg Accuracy: ' + str(fmincg_acc) + '\n')

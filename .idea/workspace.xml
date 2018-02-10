@@ -5,13 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="49cfdeeb-e2a2-4ed6-b449-56bf15e807e8" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/predict.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/theta_transform.py" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/compute_cost.py" afterPath="$PROJECT_DIR$/compute_cost.py" />
-      <change beforePath="$PROJECT_DIR$/dataset.csv" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/encode_y.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/gradient_descent.py" afterPath="$PROJECT_DIR$/gradient_descent.py" />
       <change beforePath="$PROJECT_DIR$/neural_network.py" afterPath="$PROJECT_DIR$/neural_network.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,8 +19,8 @@
       <file leaf-file-name="neural_network.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/neural_network.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="124">
-              <caret line="47" column="11" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+            <state relative-caret-position="428">
+              <caret line="83" column="0" lean-forward="true" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
               <folding>
                 <element signature="e#113#131#0" expanded="true" />
               </folding>
@@ -38,8 +31,8 @@
       <file leaf-file-name="gradient_descent.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gradient_descent.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="10" column="22" lean-forward="false" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+            <state relative-caret-position="152">
+              <caret line="10" column="26" lean-forward="false" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
               <folding>
                 <element signature="e#74#92#0" expanded="true" />
               </folding>
@@ -70,11 +63,11 @@
       <file leaf-file-name="compute_cost.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/compute_cost.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="54" column="37" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+            <state relative-caret-position="171">
+              <caret line="12" column="44" lean-forward="false" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
               <folding>
                 <element signature="e#86#104#0" expanded="true" />
-                <marker date="1518212642768" expanded="true" signature="191:1870" ph="..." />
+                <marker date="1518230148577" expanded="true" signature="227:2010" ph="..." />
               </folding>
             </state>
           </provider>
@@ -203,15 +196,16 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1130064" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12260128" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="R Packages" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="R Graphics" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37934783" sideWeight="0.510661" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37934783" sideWeight="0.48933902" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37934783" sideWeight="0.48933902" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -251,7 +245,7 @@
           <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
           <folding>
             <element signature="e#86#104#0" expanded="true" />
-            <marker date="1518212642768" expanded="true" signature="191:1870" ph="..." />
+            <marker date="1518230148577" expanded="true" signature="227:2010" ph="..." />
           </folding>
         </state>
       </provider>
@@ -310,7 +304,7 @@
           <caret line="18" column="4" lean-forward="false" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
           <folding>
             <element signature="e#86#104#0" expanded="true" />
-            <marker date="1518212642768" expanded="true" signature="191:1870" ph="..." />
+            <marker date="1518230148577" expanded="true" signature="227:2010" ph="..." />
           </folding>
         </state>
       </provider>
@@ -368,7 +362,7 @@
           <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
           <folding>
             <element signature="e#86#104#0" expanded="true" />
-            <marker date="1518212642768" expanded="true" signature="191:1870" ph="..." />
+            <marker date="1518230148577" expanded="true" signature="227:2010" ph="..." />
           </folding>
         </state>
       </provider>
@@ -400,7 +394,7 @@
           <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
           <folding>
             <element signature="e#86#104#0" expanded="true" />
-            <marker date="1518212642768" expanded="true" signature="191:1870" ph="..." />
+            <marker date="1518230148577" expanded="true" signature="227:2010" ph="..." />
           </folding>
         </state>
       </provider>
@@ -459,7 +453,7 @@
           <caret line="18" column="4" lean-forward="false" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
           <folding>
             <element signature="e#86#104#0" expanded="true" />
-            <marker date="1518212642768" expanded="true" signature="191:1870" ph="..." />
+            <marker date="1518230148577" expanded="true" signature="227:2010" ph="..." />
           </folding>
         </state>
       </provider>
@@ -534,31 +528,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/compute_cost.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="54" column="37" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-          <folding>
-            <element signature="e#86#104#0" expanded="true" />
-            <marker date="1518212642768" expanded="true" signature="191:1870" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gradient_descent.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="22" lean-forward="false" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+        <state relative-caret-position="152">
+          <caret line="10" column="26" lean-forward="false" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
           <folding>
             <element signature="e#74#92#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/compute_cost.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="12" column="44" lean-forward="false" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
+          <folding>
+            <element signature="e#86#104#0" expanded="true" />
+            <marker date="1518230148577" expanded="true" signature="227:2010" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/neural_network.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="47" column="11" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+        <state relative-caret-position="428">
+          <caret line="83" column="0" lean-forward="true" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
           <folding>
             <element signature="e#113#131#0" expanded="true" />
           </folding>
